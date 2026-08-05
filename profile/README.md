@@ -4,11 +4,11 @@
 
 ## Repositories
 
-| Repository | Description |
+| <nobr>Repository</nobr> | Description |
 | :--- | :--- |
-| [eamo-frontend](https://github.com/eamo-mes/eamo-frontend) | Frontend application for the EAMO project. Built using Vue 3, Vite, TypeScript, and the Ant Design Vue components library, managed as a pnpm monorepo. Integrates authentication using OAuth 2.0 PKCE with Laravel Passport. |
-| [eamo-backend](https://github.com/eamo-mes/eamo-backend) | Backend API server and OAuth 2.0 PKCE authentication server for the EAMO platform. Built using Laravel 13, PostgreSQL, and Laravel Passport. |
-| [eam-mes-package](https://github.com/LavioDev/eam-mes-package) | Core shared Composer package providing service providers and migrations to integrate Checklist, Maintenance, Parameter Logs, and Error Monitoring into Laravel EAM MES applications, along with a Dynamic Table Extension system. |
+| <nobr>[eamo-frontend](https://github.com/eamo-mes/eamo-frontend)</nobr> | Frontend application for the EAMO project. Built using Vue 3, Vite, TypeScript, and the Ant Design Vue components library, managed as a pnpm monorepo. Integrates authentication using OAuth 2.0 PKCE with Laravel Passport. |
+| <nobr>[eamo-backend](https://github.com/eamo-mes/eamo-backend)</nobr> | Backend API server and OAuth 2.0 PKCE authentication server for the EAMO platform. Built using Laravel 13, PostgreSQL, and Laravel Passport. |
+| <nobr>[eam-mes-package](https://github.com/LavioDev/eam-mes-package)</nobr> | Core shared Composer package providing service providers and migrations to integrate Checklist, Maintenance, Parameter Logs, and Error Monitoring into Laravel EAM MES applications, along with a Dynamic Table Extension system. |
 
 ---
 
@@ -71,9 +71,10 @@ Key design characteristics of the OI:
 
 <div align="center">
   <div style="display: flex; overflow-x: auto; gap: 16px; padding: 12px 0; -webkit-overflow-scrolling: touch; justify-content: flex-start;">
+    <img src="../img/mobile-3.png" alt="Mobile OI — Equipment Parameter Logging Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
+    <img src="../img/mobile-4.png" alt="Mobile OI — Main Portal Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
     <img src="../img/mobile-1.png" alt="Mobile OI — Incident Reporting Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
     <img src="../img/mobile-2.png" alt="Mobile OI — Error Handling Resolution Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
-    <img src="../img/mobile-3.png" alt="Mobile OI — Equipment Parameter Logging Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
   </div>
 </div>
 
