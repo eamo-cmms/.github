@@ -74,7 +74,6 @@ Key design characteristics of the OI:
     <img src="../img/mobile-3.png" alt="Mobile OI — Equipment Parameter Logging Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
     <img src="../img/mobile-4.png" alt="Mobile OI — Main Portal Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
     <img src="../img/mobile-1.png" alt="Mobile OI — Incident Reporting Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
-    <img src="../img/mobile-2.png" alt="Mobile OI — Error Handling Resolution Screen" width="270" style="flex-shrink: 0; border-radius: 10px;" />
   </div>
 </div>
 
@@ -82,7 +81,7 @@ For full architectural specifications, sequence diagrams, and API payload schema
 
 ---
 
-## Core Platform Features
+## Features
 
 ### Equipment & Master Data Management
 
