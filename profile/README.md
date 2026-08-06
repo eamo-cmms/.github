@@ -48,6 +48,20 @@ The desktop portal delivers comprehensive dashboards, analytical charts, asset h
 <br/>
 
 <div align="center">
+  <p><b>Equipment Parameter Logs — Historical Telemetry Logs & Trend Analysis</b></p>
+  <img src="../img/parameter-log.png" alt="Equipment Parameter Logs" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <p><b>Operating Times & Utilization — Machine Run Hours & Downtime Tracking</b></p>
+  <img src="../img/operating-times.png" alt="Operating Times & Utilization" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
   <p><b>Workspace View — Operational Layout & Multi-department Overview</b></p>
   <img src="../img/workspace.png" alt="Workspace View" width="100%" />
 </div>
