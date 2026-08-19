@@ -110,26 +110,34 @@ The Operator Interface is a lightweight, mobile-first web portal designed specif
 - **Automated Data Sanitization**: Client-side filtering automatically strips un-entered fields to ensure database integrity.
 - **Live Push Notification Feed**: Real-time error dispatches and maintenance schedule assignments.
 
-<div align="center">
-  <div style="display: flex; overflow-x: auto; gap: 16px; padding: 12px 0; -webkit-overflow-scrolling: touch; justify-content: center; flex-wrap: wrap;">
-    <div style="text-align: center; max-width: 260px; margin: 8px;">
-      <img src="../img/mobile-4.png" alt="Mobile Navigation Hub" width="240" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-      <p><b>1. Quick Navigation Hub</b><br/><sub>Speed dial menu for instant workflow access</sub></p>
-    </div>
-    <div style="text-align: center; max-width: 260px; margin: 8px;">
-      <img src="../img/mobile-3.png" alt="Checklist Task List" width="240" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-      <p><b>2. Inspection & Maintenance Tasks</b><br/><sub>Live progress rings & fast incident triggers</sub></p>
-    </div>
-    <div style="text-align: center; max-width: 260px; margin: 8px;">
-      <img src="../img/mobile-1.png" alt="QR Scanner" width="240" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-      <p><b>3. Camera QR Scanner</b><br/><sub>Instant machine binding via physical QR badge</sub></p>
-    </div>
-    <div style="text-align: center; max-width: 260px; margin: 8px;">
-      <img src="../img/mobile-2.png" alt="Notifications Center" width="240" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-      <p><b>4. Push Notifications</b><br/><sub>Real-time machine breakdown & dispatch alerts</sub></p>
-    </div>
-  </div>
-</div>
+<table align="center">
+  <tr>
+    <td align="center" valign="top" width="25%">
+      <img src="../img/mobile-4.png" alt="Mobile Navigation Hub" width="100%" />
+      <br/><br/>
+      <b>1. Quick Navigation Hub</b><br/>
+      <sub>Speed dial menu for instant workflow access</sub>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <img src="../img/mobile-3.png" alt="Checklist Task List" width="100%" />
+      <br/><br/>
+      <b>2. Inspection Tasks</b><br/>
+      <sub>Live progress rings & fast incident triggers</sub>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <img src="../img/mobile-1.png" alt="QR Scanner" width="100%" />
+      <br/><br/>
+      <b>3. Camera QR Scanner</b><br/>
+      <sub>Instant machine binding via physical QR badge</sub>
+    </td>
+    <td align="center" valign="top" width="25%">
+      <img src="../img/mobile-2.png" alt="Notifications Center" width="100%" />
+      <br/><br/>
+      <b>4. Push Notifications</b><br/>
+      <sub>Real-time machine breakdown & dispatch alerts</sub>
+    </td>
+  </tr>
+</table>
 
 For detailed technical workflow specifications, see the [Operator Interface Technical Documentation Master Index](../docs/oi/README.md).
 
