@@ -12,7 +12,7 @@
 
 **Enterprise-grade Industrial Asset Management & Maintenance Operations System**
 
-[Overview](#overview) • [Desktop Management Console](#desktop-web-management-console) • [Mobile Operator Interface](#mobile-operator-interface-oi) • [Core Modules](#core-modules) • [RBAC](#role-based-access-control) • [Tech Stack](#system-architecture--technology-stack)
+[Overview](#overview) • [Desktop Management Console](#desktop-web-management-console) • [Mobile Operator Interface](#mobile-operator-interface-oi) • [Core Modules](#core-modules) • [Dynamic RBAC](#role-based-access-control--dynamic-permissions) • [Tech Stack](#system-architecture--technology-stack)
 
 </div>
 
@@ -88,6 +88,13 @@ The desktop portal delivers high-level operational intelligence, visual asset to
 <div align="center">
   <p><b>Equipment Parameter Telemetry Logs — Time-Series Trends & Boundary Limit Warnings</b></p>
   <img src="../img/parameter-log.png" alt="Equipment Parameter Logs and Trends" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <p><b>User Dynamic Permissions Matrix — Granular RBAC, Role Boundaries & Category Tabs</b></p>
+  <img src="../img/rbac.png" alt="User Dynamic Permissions Matrix" width="100%" />
 </div>
 
 <br/>
@@ -183,16 +190,24 @@ End-to-end management of shop-floor machine breakdowns:
 
 ---
 
-## Role-Based Access Control
+## Role-Based Access Control & Dynamic Permissions
 
-EAMO enforces a 4-tier hierarchical access model at both the API middleware and UI routing layers:
+EAMO enforces a robust **Dynamic Permission Matrix** coupled with **Zero-Configuration Policy Auto-Discovery** that strictly enforces business boundaries while granting granular administrative flexibility:
 
-| Role | Hierarchy Level | Key Permissions & Operational Scope |
-| :--- | :---: | :--- |
-| **Admin** | Level 4 | System-wide governance: company profiles, department structures, user account provisioning, role assignment, and global master data settings. |
-| **Manager** | Level 3 | Operations leadership: create/modify equipment master data, approve checklist judgements, configure maintenance plans, manage breakdown logs, and review facility analytics. |
-| **Engineer** | Level 2 | Technical execution: perform daily checklist inspections, complete maintenance work orders, record equipment telemetry parameters, and log incident reports. |
-| **User** | Level 1 | Base access: view personal task assignments, manage user profile, and receive system notification alerts. |
+| Role | Role Boundaries & Access Policy | Permission Customization |
+| :--- | :--- | :--- |
+| **Admin** | **Super-Admin Bypass**: Possesses 100% of permissions across the entire platform via `Gate::before`. Can configure company, department, user accounts, and assign dynamic permissions. | Immutable (Full Access) |
+| **Manager** | **Operations Governance**: Authorized for Organization administration (`Company`, `Department`, `User`) and all Technical Operations, strictly governed by assigned dynamic permissions. | Dynamic (Configurable by Admin) |
+| **Engineer** | **Technical Execution Boundary**: Strictly prohibited from Organization management at both Policy & Request layers. Granted granular access to Equipment, Checklists, Maintenance, and Logs. | Dynamic (Configurable by Admin) |
+| **Guest** | **Read-Only Audit**: Unrestricted viewing access (`view`, `viewAny`) across all modules. 100% of data mutations (`create`, `update`, `delete`, `judge`, `save`) are strictly forbidden. | Immutable (View Only) |
+| **User** | **Standard Operator**: View assigned tasks, manage personal profile, and receive system notifications. | Immutable (Base Access) |
+
+### 5 Standardized Permission Domains:
+1. **Organization Management**: Company, Department, and User CRUD (*Manager & Admin only*).
+2. **Equipment Masterdata**: Equipment hierarchy, Categories, Parameters, Error Codes, and Units.
+3. **Checklist Operations**: Session creation, Result evaluation/judgment, and Schedule management.
+4. **Maintenance Operations**: Planning, Approval/Judgement, Work order execution, and History logs.
+5. **Monitoring & Operating Logs**: Breakdown telemetry, Machine run hours, and Parameter measurements.
 
 ---
 
@@ -200,9 +215,9 @@ EAMO enforces a 4-tier hierarchical access model at both the API middleware and 
 
 | Layer | Component / Technology | Description |
 | :--- | :--- | :--- |
-| **Backend API** | Laravel 13 / PHP 8.4 | Modular architecture utilizing Single Action Controllers (Action-Domain-Responder pattern) — [eamo-backend](https://github.com/eamo-mes/eamo-backend) |
+| **Backend API** | Laravel 13 / PHP 8.4 | Modular architecture utilizing Single Action Controllers (Action-Domain-Responder pattern) with zero-config Policy Auto-Discovery — [eamo-backend](https://github.com/eamo-mes/eamo-backend) |
 | **Core Package** | [eam-mes-package](https://github.com/LavioDev/eam-mes-package) | Core service providers, database migrations, and Dynamic Table Extension system integrating Checklist, Maintenance, Parameter Logs, and Error Monitoring |
-| **Authentication** | Laravel Passport | OAuth 2.0 PKCE authentication with custom role-enforcing middleware (`admin`, `manager`, `engineer`) |
+| **Authentication & RBAC** | Laravel Passport + Gates & Policies | OAuth 2.0 PKCE authentication with dynamic permission evaluation, role boundary lockdown, and Super-Admin bypass |
 | **Desktop Frontend** | Vue 3 + TypeScript + Vite | Monorepo architecture with Ant Design Vue component system, Pinia state stores, and Chart.js visualizations — [eamo-frontend](https://github.com/eamo-mes/eamo-frontend) |
 | **Mobile OI Portal** | Vue 3 + Mobile-First PWA | Responsive mobile portal with HTML5 Camera Stream QR code scanning and speed-dial navigation |
 | **Database** | PostgreSQL 16 | Relational schema with UUID primary keys, temporal telemetry logs, and JSONB extension storage |
