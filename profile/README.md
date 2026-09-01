@@ -215,10 +215,10 @@ EAMO enforces a robust **Dynamic Permission Matrix** coupled with **Zero-Configu
 
 | Layer | Component / Technology | Description |
 | :--- | :--- | :--- |
-| **Backend API** | Laravel 13 / PHP 8.4 | Modular architecture utilizing Single Action Controllers (Action-Domain-Responder pattern) with zero-config Policy Auto-Discovery — [eamo-backend](https://github.com/eamo-mes/eamo-backend) |
+| **Backend API** | Laravel 13 / PHP 8.4 | Modular architecture utilizing Single Action Controllers (Action-Domain-Responder pattern) with zero-config Policy Auto-Discovery — [eamo-backend](https://github.com/eamo-cmms/eamo-backend) |
 | **Core Package** | [eam-mes-package](https://github.com/LavioDev/eam-mes-package) | Core service providers, database migrations, and Dynamic Table Extension system integrating Checklist, Maintenance, Parameter Logs, and Error Monitoring |
 | **Authentication & RBAC** | Laravel Passport + Gates & Policies | OAuth 2.0 PKCE authentication with dynamic permission evaluation, role boundary lockdown, and Super-Admin bypass |
-| **Desktop Frontend** | Vue 3 + TypeScript + Vite | Monorepo architecture with Ant Design Vue component system, Pinia state stores, and Chart.js visualizations — [eamo-frontend](https://github.com/eamo-mes/eamo-frontend) |
+| **Desktop Frontend** | Vue 3 + TypeScript + Vite | Monorepo architecture with Ant Design Vue component system, Pinia state stores, and Chart.js visualizations — [eamo-frontend](https://github.com/eamo-cmms/eamo-frontend) |
 | **Mobile OI Portal** | Vue 3 + Mobile-First PWA | Responsive mobile portal with HTML5 Camera Stream QR code scanning and speed-dial navigation |
 | **Database** | PostgreSQL 16 | Relational schema with UUID primary keys, temporal telemetry logs, and JSONB extension storage |
 | **Design System** | Tailored Modern Industrial UI | Dual-theme support (Dark/Light), multilingual localization (EN/VI), and responsive layout |
