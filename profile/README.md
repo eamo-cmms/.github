@@ -12,8 +12,6 @@
 
 **Enterprise-Grade Industrial Asset Management & Maintenance Operations System**
 
-🌐 **Live Production Platform:** [**https://eamo.io.vn**](https://eamo.io.vn/)
-
 <br/>
 
 <img src="../img/dashboard.png" alt="EAMO Executive Dashboard" width="100%" />
